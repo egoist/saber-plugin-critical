@@ -3,6 +3,8 @@ const ID = 'critical'
 exports.name = ID
 
 exports.apply = api => {
+  if (api.mode !== 'production') return
+
   api.hooks.beforeRun.tap(ID, () => {
     api.log.debug('[critical] Setting `css.extract` to true in Saber config')
     api.config.css.extract = true
