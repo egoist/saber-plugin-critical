@@ -30,8 +30,11 @@
     "jest": "^24.7.1",
     "lint-staged": "^7.2.0",
     "prettier": "^1.15.2",
-    "saber": "^0.3.6",
+    "saber": "^0.3.7",
     "xo": "^0.23.0"
+  },
+  "peerDependencies": {
+    "saber": "^0.3.7"
   },
   "xo": {
     "extends": [

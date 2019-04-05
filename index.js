@@ -6,8 +6,10 @@ exports.apply = api => {
   if (api.mode !== 'production') return
 
   api.hooks.beforeRun.tap(ID, () => {
-    api.log.debug('[critical] Setting `css.extract` to true in Saber config')
-    api.config.css.extract = true
+    api.log.debug(
+      '[critical] Setting `build.extractCSS` to true in Saber config'
+    )
+    api.config.build.extractCSS = true
   })
 
   api.hooks.afterGenerate.tapPromise(ID, async () => {
