@@ -21,8 +21,6 @@ exports.apply = api => {
       absolute: false
     })
 
-    api.log.info(files)
-
     await Promise.all(
       files.map(file => {
         return critical
